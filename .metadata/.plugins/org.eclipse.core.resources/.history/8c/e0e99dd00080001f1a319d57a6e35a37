@@ -1,8 +1,0 @@
-package moralesmarcos104;
-
-public class Articulo {
-	private String nombre;
-	private double precio;
-	private int existencias;
-	
-}
