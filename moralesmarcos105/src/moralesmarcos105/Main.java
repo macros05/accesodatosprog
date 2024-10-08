@@ -15,7 +15,7 @@ public class Main {
         // Guardamos la lista de productos en un archivo binario
         guardarProductosEnArchivo(productos, "productos.dat");
 
-        // Leemos la lista de productos desde el archivo binario
+        // Leemos la lista de productos desde el archivo binario-
         List<Producto> productosLeidos = leerProductosDesdeArchivo("productos.dat");
 
         // Mostramos los productos leídos
