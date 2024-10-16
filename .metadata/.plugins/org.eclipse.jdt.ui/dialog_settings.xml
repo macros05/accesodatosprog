@@ -4,6 +4,8 @@
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-20"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\Marcos\Downloads"/>
+	<item key="UserLibraryLoadSaveDialog.size" value="640,680"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -112,5 +114,11 @@
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
 			<item value=".xml"/>
 		</list>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="3"/>
 	</section>
 </section>
