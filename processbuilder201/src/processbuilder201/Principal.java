@@ -24,5 +24,4 @@ public class Principal {
         
         System.out.println("Todos los ratones terminaron de comer.");
     }
-    //Prueba funciona git
 }
