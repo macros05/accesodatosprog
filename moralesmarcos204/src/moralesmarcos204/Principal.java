@@ -22,7 +22,6 @@ public class Principal {
 
             Statement stmt = con.createStatement();
 
-            // Crear tablas
             stmt.execute("CREATE TABLE IF NOT EXISTS articulos (" +
                     "codart INT PRIMARY KEY, " +
                     "descripcion VARCHAR(255), " +
@@ -62,14 +61,14 @@ public class Principal {
                         System.out.println("Ingrese los datos del artículo:");
                         System.out.print("Código de artículo: ");
                         int codart = scanner.nextInt();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine(); 
                         System.out.print("Descripción: ");
                         String descripcion = scanner.nextLine();
                         System.out.print("Existencias: ");
                         int existencias = scanner.nextInt();
                         System.out.print("Precio: ");
                         double precio = scanner.nextDouble();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine(); 
 
                         PreparedStatement pstmtArticulo = con.prepareStatement(
                                 "INSERT INTO articulos (codart, descripcion, existencias, precio) VALUES (?, ?, ?, ?)");
@@ -83,19 +82,19 @@ public class Principal {
                         System.out.println("\nIngrese los datos del pedido:");
                         System.out.print("Código de pedido: ");
                         int codped = scanner.nextInt();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine();  
                         System.out.print("Fecha del pedido (YYYY-MM-DD): ");
                         String fecha = scanner.nextLine();
                         System.out.print("Código del cliente: ");
                         int codcli = scanner.nextInt();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine(); 
                         System.out.print("Dirección: ");
                         String direccion = scanner.nextLine();
                         System.out.print("Código de artículo: ");
                         int codartPedido = scanner.nextInt();
                         System.out.print("Cantidad: ");
                         int cantidad = scanner.nextInt();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine(); 
 
                         // Alta en tabla de pedidos
                         PreparedStatement pstmtPedido = con.prepareStatement(
@@ -118,7 +117,7 @@ public class Principal {
                         // Alta en tabla de envíos
                         System.out.print("\nIngrese el código del rider asignado para el envío: ");
                         int codriderEnvio = scanner.nextInt();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine(); 
                         PreparedStatement pstmtEnvio = con.prepareStatement(
                                 "INSERT INTO envios (codped, codrider, terminado) VALUES (?, ?, 'N')");
                         pstmtEnvio.setInt(1, codped);
@@ -141,7 +140,8 @@ public class Principal {
                     System.out.println("\nIngrese los datos del rider:");
                     System.out.print("Código de rider: ");
                     int codigoRider = scanner.nextInt();
-                    scanner.nextLine(); // Limpiar buffer
+                    scanner.nextLine(); 
+                    
                     System.out.print("Nombre del rider: ");
                     String nombreRider = scanner.nextLine();
                     System.out.print("Disponible (S/N): ");
