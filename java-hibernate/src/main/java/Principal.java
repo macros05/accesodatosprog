@@ -95,7 +95,8 @@ public class Principal {
         Scanner teclado = new Scanner(System.in);
         int opcion = 1;
 
-        while (opcion != 0) {
+         while (opcion != 0) {
+      
             System.out.println("Introduzca :\n"
                     + "1. Para introducir una nueva cancion \n"
                     + "2. Para buscar una canción \n"
@@ -104,8 +105,10 @@ public class Principal {
                     + "0. Salir");
             opcion = teclado.nextInt();
             teclado.nextLine();
-
-            if (opcion == 1) {
+            switch (opcion) {
+            
+            
+            case 1: 
                 System.out.println("Introduzca el nombre de la canción");
                 String nombreCancion = teclado.nextLine();
 
@@ -121,15 +124,17 @@ public class Principal {
 
                 Canciones cancionIntroducida = new Canciones(nombreCancion, cantanteCancion, albumCancion, fechaLanzamiento);
                 guardarCancion(cancionIntroducida);
-            }
+            
+                break;
 
-            if (opcion == 2) {
+            case 2:  
                 System.out.println("Introduzca el nombre de la canción");
-                String nombreCancion = teclado.nextLine();
+                nombreCancion = teclado.nextLine();
                 buscarCancion(nombreCancion);
-            }
-
-            if (opcion == 3) {
+            
+                break;
+                
+            case 3: 
                 System.out.println("Introduzca el codigo de la canción");
                 int codigoCancion = teclado.nextInt();
                 teclado.nextLine();
@@ -146,24 +151,27 @@ public class Principal {
                 System.out.print("Fecha de lanzamiento (YYYY-MM-DD): ");
                 String nuevaFecha = teclado.nextLine();
 
-                LocalDate fechaLanzamiento = LocalDate.parse(nuevaFecha);
+                fechaLanzamiento = LocalDate.parse(nuevaFecha);
                 actualizarCancion(codigoCancion, nuevoNombre, nuevoCantante, nuevoAlbum, fechaLanzamiento);
-            }
-
-            if (opcion == 4) {
+            
+                break;
+                
+            case 4: 
                 System.out.println("Introduzca el codigo de la cancion a borrar");
-                int codigoCancion = teclado.nextInt();
+                codigoCancion = teclado.nextInt();
                 teclado.nextLine();
                 borrarCancion(codigoCancion);
-            }
+            break;
             
-            if (opcion == 0) {
+            case 0: 
             	System.out.println("Saliendo del programa");
-            }
-            
-            else {
-            	System.out.println("Numero no valido");
-            }
+            	
+            	break;
+            	
+            default: 
+            	System.out.println("Opcion no valida");
+            	break;
+            } 	
         }
 
         teclado.close();
