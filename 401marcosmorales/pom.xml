@@ -12,5 +12,11 @@
 			<artifactId>mongodb-driver-sync</artifactId>
 			<version>4.9.0</version> <!-- Verifica la última versión -->
 		</dependency>
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
+		</dependency>
+
 	</dependencies>
 </project>
